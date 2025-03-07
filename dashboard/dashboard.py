@@ -30,6 +30,7 @@ ax.plot(filtered_df['dteday'], filtered_df['cnt_daily'], marker='o', color='#90C
 ax.set_xlabel("Tanggal")
 ax.set_ylabel("Jumlah Peminjaman Sepeda")
 ax.set_title("Tren Peminjaman Sepeda per Hari")
+ax.grid(True, linestyle="--", alpha=0.7, axis="x")
 ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 plt.xticks(rotation=45)
 st.pyplot(fig)
@@ -44,6 +45,7 @@ sns.barplot(x='season', y='cnt_daily', data=seasonal_trend, hue='season', palett
 ax.set_xlabel("Musim")
 ax.set_ylabel("Rata-rata Jumlah Peminjaman")
 ax.set_title("Distribusi Rata-rata Peminjaman per Musim")
+ax.grid(True, linestyle="--", alpha=0.7, axis="x")
 ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 st.pyplot(fig)
 
@@ -56,6 +58,7 @@ sns.scatterplot(x='temp_daily', y='cnt_daily', data=temp_trend, color='#90CAF9',
 ax.set_xlabel("Suhu Harian (°C)")
 ax.set_ylabel("Jumlah Peminjaman Sepeda")
 ax.set_title("Pengaruh Suhu terhadap Jumlah Peminjaman Sepeda")
+ax.grid(True, linestyle="--", alpha=0.7, axis="x")
 ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 st.pyplot(fig)
 
@@ -67,5 +70,6 @@ sns.lineplot(x='hr', y='cnt_hourly', data=busy_hours, marker='o', color='#90CAF9
 ax.set_xlabel("Jam")
 ax.set_ylabel("Rata-rata Peminjaman Sepeda")
 ax.set_title("Jam Sibuk Peminjaman Sepeda")
+ax.grid(True, linestyle="--", alpha=0.7, axis="x")
 ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 st.pyplot(fig)
