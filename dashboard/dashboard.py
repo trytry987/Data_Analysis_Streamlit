@@ -45,7 +45,6 @@ sns.barplot(x='season', y='cnt_daily', data=seasonal_trend, hue='season', palett
 ax.set_xlabel("Musim")
 ax.set_ylabel("Rata-rata Jumlah Peminjaman")
 ax.set_title("Distribusi Rata-rata Peminjaman per Musim")
-ax.grid(True, linestyle="--", alpha=0.7, axis="x")
 ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 st.pyplot(fig)
 
