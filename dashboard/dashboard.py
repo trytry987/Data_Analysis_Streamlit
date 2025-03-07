@@ -67,4 +67,5 @@ sns.lineplot(x='hr', y='cnt_hourly', data=busy_hours, marker='o', color='#90CAF9
 ax.set_xlabel("Jam")
 ax.set_ylabel("Rata-rata Peminjaman Sepeda")
 ax.set_title("Jam Sibuk Peminjaman Sepeda")
+ax.grid(True, linestyle="--", alpha=0.7, axis="y")
 st.pyplot(fig)
